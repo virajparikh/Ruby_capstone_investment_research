@@ -1,7 +1,7 @@
 User Stories for Investment_Research App
 --------------------------------------------------------------
 
--  As an investment analyst, 
+- As an investment analyst, 
 
 In order to analyze the companies that I am interested in,
 
