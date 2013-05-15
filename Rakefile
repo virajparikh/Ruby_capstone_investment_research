@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+# -*- ruby -*-
+
+require 'rake/testtask'
+require_relative 'bootstrap_ar'
+
+Rake::TestTask.new do |t|
+ t.libs << 'test'
+end
+
+desc "Run tests"
+task :default => :test
+
+
+require 'active_record'
+require 'yaml'
+
+namespace :db do
+
+  desc "Migrate the db"
+  task :migrate do
+    connection_details = YAML::load(File.open('config/database.yml'))
+    ActiveRecord::Base.establish_connection(connection_details)
+    ActiveRecord::Migrator.migrate("db/migrate/")
+  end
+
+end
