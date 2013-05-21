@@ -1,6 +1,6 @@
 Purpose
 -------
-This Ruby app is an investment research tool that ultimately aims to eliminate the need for expensive services like Bloomberg and Capital IQ, which can cost between $1,000 - $2,000 per month.  Most of the information that an investment analyst needs exists in the public domain, like the SEC's EDGAR database.  This app will allow the user to call upon a company, either by name or by ticker, and retrieve specific financials, ownership or insider trading data on that company.
+RubyStocks is an investment research app that ultimately aims to eliminate the need for expensive services like Bloomberg and Capital IQ, which can cost between $1,000 - $2,000 per month.  Most of the information that an investment analyst needs exists in the public domain, like the SEC's EDGAR database.  This app will allow the user to call upon a company, either by name or by ticker, and retrieve specific financials, ownership or insider trading data on that company.
 
 
 Project Status

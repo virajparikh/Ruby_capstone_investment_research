@@ -1,6 +1,13 @@
-require 'test/unit'
+require "minitest/autorun"
 require_relative '../bootstrap_ar'
 
-#other test prep stuff goes here
+connect_to 'test'
 
-Project.destroy_all
+ENV['FP_ENV'] = 'test'
+
+module DatabaseCleaner
+  def before_setup
+    super
+    Portfolio.destroy_all
+  end
+end
