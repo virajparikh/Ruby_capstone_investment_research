@@ -16,7 +16,7 @@ class PortfolioController
     if portfolio.save
       puts "Success!"
     else
-      puts "Sorry, your portfolio did not save."
+      puts "Sorry, your portfolio did not save.  That portfolio name already exists."
     end
   end
 
