@@ -14,9 +14,9 @@ class PortfolioController
   def create
     portfolio = Portfolio.new(params[:portfolio])
     if portfolio.save
-      puts "Success!"
-    else
-      puts "Sorry, your portfolio did not save.  That portfolio name already exists."
+      puts "Success!  Your '#{portfolio.name}' portfolio has been created."
+    else  
+      puts "Sorry!  Your '#{portfolio.name}' portfolio did not save.  That portfolio name already exists."
     end
   end
 
