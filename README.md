@@ -10,6 +10,9 @@ Everything is preliminary - pure planning stage right now
 
 Features
 --------
+Read instructions below for current feature set.  
+
+Ultimately, I hope to get the app to the following state:  
 The sole source for all data in this app is the SEC Edgar database.  Input company ticker, financial metric and time period, and the app will return the data that is sought.  The sources of finacial data will be either Form 10-K or 10-Q - mandatory annual and quarterly filings by publicly traded companies.  Other retrievable data points include Form 13-D, which reveals greater than 5% ownership in a company, and Form 144, which reveals insider (C-level officers and/or Directors) buys and sells.
 
 
@@ -20,6 +23,12 @@ Yeah, surely there will be some, but over time we will work them out.
 
 Instructions
 ------------
+Currently supported commands are:  ruby rubystocks...
+* list
+* add <portfolio_name>
+* remove <portfolio_name>
+* edit <portfolio_name>
+* view <portfolio_name>
 
 
 About Author
