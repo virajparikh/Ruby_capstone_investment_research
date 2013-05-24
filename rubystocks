@@ -10,9 +10,7 @@ portfolio_name = ARGV[1]
 
 params = { command: command, portfolio: { name: portfolio_name } }
 portfolio_controller = PortfolioController.new(params)
-ticker_controller = TickerController.new(params)
 
-# This is a router:
 if command == "add"
   portfolio_controller.create
 elsif command == "list"
@@ -20,8 +18,10 @@ elsif command == "list"
 elsif command == "remove"
   portfolio_controller.destroy
 elsif command == "edit"
+  ticker_controller = TickerController.new(params)
   ticker_controller.edit
 elsif command == "view"
+  ticker_controller = TickerController.new(params)
   ticker_controller.view
 else
   unless command == "help"
@@ -29,9 +29,9 @@ else
   end
   puts <<EOS
 Currently supported commands are:
-* portfolio list
-* portfolio add <portfolio_name>
-* portfolio remove <portfolio_name>
+* list
+* add <portfolio_name>
+* remove <portfolio_name>
 
 See the README for more details
 EOS

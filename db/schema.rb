@@ -11,13 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5212013122100) do
+ActiveRecord::Schema.define(:version => 5222013161600) do
 
   create_table "portfolios", :force => true do |t|
     t.string "name"
   end
 
   create_table "tickers", :force => true do |t|
+    t.string "name"
+    t.string "portfolio_id"
+  end
+
+  create_table "users", :force => true do |t|
     t.string "name"
   end
 
