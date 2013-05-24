@@ -24,6 +24,7 @@ class PortfolioController
     matching_portfolios = Portfolio.where(name: params[:portfolio][:name]).all
     matching_portfolios.each do |portfolio|
       portfolio.destroy
+    puts "Destroyed!  Your '#{portfolio.name}' portfolio has been deleted."
     end
   end
 
