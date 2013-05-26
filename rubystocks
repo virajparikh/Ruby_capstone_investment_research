@@ -29,10 +29,13 @@ else
   end
   puts <<EOS
 Currently supported commands are:
-* list
+* list (to view names of all portfolios)
 * add <portfolio_name>
 * remove <portfolio_name>
+* view <portfolio_name>
+* edit <portfolio_name>
 
 See the README for more details
+
 EOS
 end
