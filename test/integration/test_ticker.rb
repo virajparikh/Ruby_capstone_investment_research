@@ -3,15 +3,15 @@ require_relative '../test_helper'
 class TestTickers < MiniTest::Unit::TestCase
   include DatabaseCleaner  ## what is this?
 
-  def test_add_ticker
-    portfolio = Portfolio.create(name: "Tech")
-    `ruby rubystocks add Tech GOOG`
-    assert_equal(1, portfolio.tickers.count)
+  def test_9_add_ticker
+    portfolio = Ticker.create(name: "Tech")
+    `ruby rubystocks add Tech`
+    assert_equal(1, ticker.count)
   end
 
   def test_add_ticker_creates_correct_name
-    portfolio = Portfolio.create(name: "Tech")
-    `ruby rubystocks add Tech GOOG`
+    portfolio = Ticker.create(name: "Tech")
+    `ruby rubystocks add Tech`
     assert_equal("GOOG", portfolio.tickers.last.name)
   end
 
