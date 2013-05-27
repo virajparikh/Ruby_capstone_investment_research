@@ -28,7 +28,7 @@ class PortfolioController
     end
   end
 
-  private  # what is this?
+  private
 
   def params
     @params

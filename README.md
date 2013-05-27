@@ -18,17 +18,17 @@ The sole source for all data in this app is the SEC Edgar database.  Input compa
 
 Bugs
 ----
-Yeah, surely there will be some, but over time we will work them out.
+For sure.
 
 
 Instructions
 ------------
-Currently supported commands are:  ruby rubystocks...
+Currently supported commands are: ruby rubystocks...
 * list
-* add <portfolio_name>
-* remove <portfolio_name>
-* edit <portfolio_name>
-* view <portfolio_name>
+* add portfolio_name
+* remove portfolio_name
+* edit portfolio_name
+* view portfolio_name
 
 
 About Author

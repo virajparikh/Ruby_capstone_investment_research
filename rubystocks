@@ -17,12 +17,15 @@ elsif command == "list"
   portfolio_controller.index
 elsif command == "remove"
   portfolio_controller.destroy
-elsif command == "edit"
-  ticker_controller = TickerController.new(params)
-  ticker_controller.edit
 elsif command == "view"
   ticker_controller = TickerController.new(params)
   ticker_controller.view
+elsif command == "edit"
+  ticker_controller = TickerController.new(params)
+  ticker_controller.edit
+elsif command == "ticker"
+  ticker_controller = TickerController.new(params)
+  ticker_controller.ticker
 else
   unless command == "help"
     puts "RubyStocks does not support the '#{command}' command.\n\n"
@@ -34,6 +37,7 @@ Currently supported commands are:
 * remove <portfolio_name>
 * view <portfolio_name>
 * edit <portfolio_name>
+* ticker <ticker_name>
 
 See the README for more details
 

@@ -23,12 +23,12 @@ class TickerController
 
   def add_ticker
   	puts "Add a stock ticker:"
-  	stock = $stdin.gets.chomp.upcase
-    Ticker.create(name: stock, portfolio_id: @portfolio_id)
-  	while stock != "QUIT" do
+  	stock_name = $stdin.gets.chomp.upcase
+    Ticker.create(name: stock_name, portfolio_id: @portfolio_id)
+  	while stock_name != "QUIT" do
   	  puts "Add another stock ticker (press 'quit' to exit):"
-  	  stock = $stdin.gets.chomp.upcase
-      Ticker.create(name: stock, portfolio_id: @portfolio_id) unless stock == "QUIT" || stock == ""
+  	  stock_name = $stdin.gets.chomp.upcase
+      Ticker.create(name: stock_name, portfolio_id: @portfolio_id) unless stock_name == "QUIT" || stock_name == ""
     end
     view
   end
@@ -36,27 +36,27 @@ class TickerController
   def delete_ticker
   	puts "Delete which stock ticker?"
     stock_name = $stdin.gets.chomp.upcase
-    matching_tickers = Ticker.where(name: stock_name, portfolio_id: @portfolio_id)
-    matching_tickers.each do |ticker|
+    matching_ticker = Ticker.where(name: stock_name, portfolio_id: @portfolio_id)
+    matching_ticker.each do |ticker|
       ticker.destroy
     end
     
-    # while stock_name != "QUIT" do
-    #   puts "Delete another stock ticker (press 'quit' to exit):"
-    #   stock_name = $stdin.gets.chomp.upcase
-    #   matching_tickers = Ticker.where(name: stock_name, portfolio_id: @portfolio_id)
-    #   matching_tickers.each do |ticker|
-    #     ticker.destroy unless stock_name == "QUIT" || stock_name == ""
-    #   end
+    while stock_name != "QUIT" do
+      puts "Delete another stock ticker (press 'quit' to exit):"
+      stock_name = $stdin.gets.chomp.upcase
+      matching_ticker = Ticker.where(name: stock_name, portfolio_id: @portfolio_id)
+      matching_ticker.each do |ticker|
+        ticker.destroy unless stock_name == "QUIT" || stock_name == ""
+      end
+    end
     view
   end
 
-  def view_portfolios
-  	puts "Enter ticker name:"
+  def ticker
+  	puts "See all portfolios for the following ticker:"
   	ticker_name = $stdin.gets.chomp.upcase
-  	puts "View all portfolios for this ticker:"
-  	ports = Ticker.where(name: ticker_name).all
-  	ports.each_with_index do |p, i|
+  	portfolios = Ticker.where(name: ticker_name).all
+  	portfolios.each_with_index do |p, i|
   		puts "#{i + 1}. #{p.portfolio.name}"
   	end
   end
