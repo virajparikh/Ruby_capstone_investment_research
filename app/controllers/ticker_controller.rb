@@ -6,6 +6,8 @@ class TickerController
 
   def view
   	tickers = Ticker.where(portfolio_id: @portfolio_id).all
+    
+
     tickers.each_with_index do |ticker, i|
       puts  "#{i+1}. #{ticker.name}"
     end
