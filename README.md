@@ -6,7 +6,7 @@ RubyStocks is an investment research app that ultimately aims to eliminate the n
 Project Status
 --------------
 
-[![Build Status](https://github.com/virajparikh/Ruby_capstone_investment_research.png)](https://github.com/virajparikh/Ruby_capstone_investment_research)
+[![Build Status](https://travis-ci.org/virajparikh/Ruby_capstone_investment_research.png)](https://travis-ci.org/virajparikh/Ruby_capstone_investment_research)
 
 Currently the user can list, create or delete stocks portfolios, and add/delete stock tickers to the various portfolios created.
 
