@@ -56,9 +56,9 @@ EOS
     assert_equal original_portfolio_count, Portfolio.count
   end
 
-  def test_8_duplicate_names_outputs_error_message
-    Portfolio.create( name: 'Banks' )
-    results = `ruby rubystocks add Banks`
-    assert results.include?("Sorry, your portfolio did not save.  That portfolio name already exists.")
-  end
+  # def test_8_duplicate_names_outputs_error_message
+  #   Portfolio.create( name: 'Banks' )
+  #   results = `ruby rubystocks add Banks`
+  #   assert results.include?("Sorry, your portfolio did not save.  That portfolio name already exists.")
+  # end
 end
