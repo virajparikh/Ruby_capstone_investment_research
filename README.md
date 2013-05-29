@@ -5,6 +5,9 @@ RubyStocks is an investment research app that ultimately aims to eliminate the n
 
 Project Status
 --------------
+
+[![Build Status]](https://github.com/virajparikh/Ruby_capstone_investment_research)
+
 Currently the user can list, create or delete stocks portfolios, and add/delete stock tickers to the various portfolios created.
 
 Ultimately, the app will extract financial data like inventory, revenues, or operating cash flow from the SEC Edgar database.  Input company ticker, financial metric and time period, and the app will return the data that is sought.  The sources of finacial data will be either Form 10-K or 10-Q - mandatory annual and quarterly filings by publicly traded companies.  Other retrievable data points include Form 13-D, which reveals greater than 5% ownership in a company, and Form 144, which reveals insider (C-level officers and/or Directors) buys and sells.
