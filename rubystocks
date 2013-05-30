@@ -37,7 +37,6 @@ Currently supported commands are:
 * remove <portfolio_name>
 * view <portfolio_name>
 * edit <portfolio_name>
-* ticker <ticker_name>
 
 See the README for more details
 

@@ -1,1 +1,0 @@
-class Portfolio < ActiveRecord::Base
